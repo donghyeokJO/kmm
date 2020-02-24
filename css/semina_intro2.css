@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#pre {
+    width: 100%;
+    background-color: #fff;
+}
+
+.section_pre_title {
+    width: 100%;
+    height: 55px;
+    background-color: #cce2ff;
+}
+
+.section_pre_title_area {
+    width: 1024px;
+    height: 55px;
+    margin: 0 auto;
+    padding-left: 13px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -1.44px;
+    line-height: 55px;
+    text-align: left;
+    color: #2b2b2b;
+}
+
+.intro {
+    margin: 0 auto;
+    width: 1024px;
+    height: auto;
+    overflow: hidden;
+    padding: 20px 11px 31px 11px;
+}
+
+.semina_item {
+    width: 316px;
+    height: 540px;
+    border: solid 1px #bfbfbf;
+    background-color: #fcfafa;
+    float: left;
+    margin: 0 9px;
+    cursor: pointer;
+}
+
+.semina_date {
+    margin: 12px 0 0 12px;
+    font-family: NotoSansCJKkr;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: -0.96px;
+    text-align: left;
+    color: #1967d1;
+}
+
+.semina_img {
+    margin: 0 auto;
+    margin-top: 18px;
+    width: 284px;
+    height: 409px;
+    border: solid 1px #bfbfbf;
+    background-color: #c9c9c9;
+}
+
+.semina_img img {
+
+    top: 0;
+    left: 0;
+    width: 284px;
+    height: 409px;
+}
+
+.semina_title {
+    margin: 14px 0 0 12px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: left;
+    color: #2b2b2b;
+}
+
+.semina_tel {
+    margin: 14px 0 0 12px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: left;
+    color: #2b2b2b;
+}
+
+@media (max-width: 800px) {
+    .section_pre_title_area {
+        width: 100%;
+    }
+
+    .intro {
+        width: 100%;
+        padding: 21px 0 40px 0;
+    }
+
+    .semina_item {
+        margin-left: 50%;
+        margin-bottom: 12px;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>대한미용개원의사회</title>
+    <link rel="stylesheet" href="css/hak2.css">
+    <link rel="stylesheet" href="css/signin2.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans|Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<header class="pc_header">
+        <div class="header">
+            <div class="logo" onclick="location.href='index'">
+                <p>대한미용개원의사회</p> <span>korean medical mentoring organization</span>
+            </div>
+            <ul class="menu">
+                <li><a href="academy_intro">학회소개</a></li>
+                <li><a href="seminar_intro">세미나</a></li>
+                <li><a href="notice">공지사항</a></li>
+                <li><a href="board">자유게시판</a></li>
+            </ul>
+            <ul class="pre">
+                <li><a href="pre">사전등록</a></li>
+                <li><a href="pre_check">사전등록확인</a></li>
+            </ul>
+            <?php
+            if (!$login) {
+                echo '
+                <div class="login" onclick="location.href=\'signin\'">
+                    로그인
+                </div>';
+            } elseif ($login) {
+                echo "
+                <div class=\"user\" onclick=\"user_click();\">
+                    <i class=\"far fa-user\"></i>
+                </div>
+                <div class=\"user_info\">
+                    <div class=\"user_container\">
+                        <div class=\"user_name\"><span>$user[u_name_kr]</span> 님</div>
+                        <div class=\"user_close\" onclick=\"user_close();\">
+                            <i class=\"fas fa-times\"></i>
+                        </div>
+                    </div>
+                    <div class=\"user_mypage\">
+                        <a href=\"mypage\">마이페이지</a>
+                    </div>
+                    <div class=\"user_logout\">
+                        <a href=\"member/logout\">로그아웃</a>
+                    </div>
+                </div>";
+            }
+            ?>
+        </div>
+    </header>
+    <header class="mobile_header">
+        <div class="menu_m_btn" onclick="m_menu_open();">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo_m" onclick="location.href='index'">
+            <p>대한미용개원의사회</p> <span>korean medical mentoring organization</span>
+        </div>
+        <?php
+        if (!$login) {
+            echo '
+                <div class="login" onclick="location.href=\'signin\'">
+                    로그인
+                </div>';
+        } elseif ($login) {
+            echo "
+                <div class=\"user\" onclick=\"user_click();\">
+                    <i class=\"far fa-user\"></i>
+                </div>
+                <div class=\"user_info\">
+                    <div class=\"user_container\">
+                        <div class=\"user_name\"><span>$user[u_name_kr]</span> 님</div>
+                        <div class=\"user_close\" onclick=\"user_close();\">
+                            <i class=\"fas fa-times\"></i>
+                        </div>
+                    </div>
+                    <div class=\"user_mypage\">
+                        <a href=\"mypage\">마이페이지</a>
+                    </div>
+                    <div class=\"user_logout\">
+                        <a href=\"member/logout\">로그아웃</a>
+                    </div>
+                </div>";
+        }
+        ?>
+        <div class="m_menu_page">
+            <?php
+            if (!$login) {
+                echo '
+                    <div class="m_menu_title">
+                        <span class="span_bold">로그인</span><span>을 해주세요</span>
+                    </div>
+                    <div class="m_menu_link" onclick="location.href=\'signin\'">
+                        로그인하러가기 >
+                    </div>';
+            } else {
+                echo "
+                    <div class=\"m_menu_title\">
+                        <span class=\"span_bold\">$user[u_name_kr]</span><span>님 반갑습니다.</span>
+                    </div>
+                    <div class=\"m_menu_link\" onclick=\"location.href='mypage'\" style =\"cursor:pointer\">
+                        마이페이지 >
+                    </div>";
+            }
+            ?>
+            <div class="m_menu_bar1"></div>
+            <ul class="m_menu">
+                <li><a href="academy_intro">학회소개</a></li>
+                <li><a href="seminar_intro">세미나</a></li>
+                <li><a href="notice">공지사항</a></li>
+                <li><a href="board">자유게시판</a></li>
+            </ul>
+            <div class="m_menu_bar2"></div>
+            <div class="m_menu_pre1">
+                <a href="pre">사전등록</a>
+            </div>
+            <div class="m_menu_pre2">
+                <a href="pre_check">사전등록 확인</a>
+            </div>
+            <div class="m_menu_close" onclick="m_menu_close();">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </header>
+    <section id="login">
+        <div class="login_left">
+            <div class="text_align_center font_weight_n" style="font-size: 24px; color: #747474;">LOGIN</div>
+            <form id="signup_form_01" method="POST" action="member/signin.php" style="margin: 0 auto;">
+                <div class="row">
+                    <div class="col-12 margin_top_l font_weight_b">아이디</div>
+                    <div class="col-12 margin_top_s">
+                        <input type="text" name="u_id" placeholder="아이디" style=" height: 50px;" />
+                    </div>
+                    <div class="col-12 margin_top_l font_weight_b">비밀번호</div>
+                    <div class="col-12 margin_top_s">
+                        <input type="password" name="u_pw" placeholder="비밀번호" style="height: 50px;" />
+                    </div>
+                    <div class="col-5 margin_top_l" style="padding-right: 0;">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="defaultUnchecked" name="auto_login">
+                            <label class="custom-control-label font_size_m" for="defaultUnchecked">로그인 상태 유지</label>
+                        </div>
+                    </div>
+                    <div class="col-7 margin_top_l text_align_right" style="font-size: 12px;">
+                        <span><a href="idinquiry" style="color:#2B2B2B; text-decoration:none">아이디
+                                찾기</a></span>
+                        <span class="margin_left_s margin_right_s">|</span>
+                        <span><a href="pwinquiry" style="color:#2B2B2B; text-decoration:none">비밀번호
+                                찾기</a></span>
+                    </div>
+                    <div class="col-12" style="margin-top: 40px;padding: 0">
+                        <div class="button" style="margin: 0 auto; background-color: #2b2b2b; color:#fff" onclick="$('#signup_form_01').submit()">로그인
+                        </div>
+
+                    </div>
+                    <div class="line col-12 margin_v_l"></div>
+
+                    <div class="col-12 text_align_center font_size_l font_weight_b">계정이 없으신가요? <span class="color_b" ><a href="signup">계정 만들기</a></span></div>
+                </div>
+            </form>
+        </div>
+        <div class="login_bar"></div>
+        <div class="login_right">
+            <div class="big_logo">
+                <p>대한미용개원의사회</p> <span>korean medical mentoring organization</span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer_title">
+                대한미용개원의사회
+            </div>
+            <ul class="footer_link">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+            <div class="footer_text">
+                사업자등록번호 : 0000000000 | 대표자 : 땡떙떙 | (우 02856) 서울시 강남구 강남대로 364 501호 <br>
+                Tel : 02-000-0000 | Fax : 02-000-0000 | Email : email@naver.com <br><br>
+
+                © 2020 대한미용개원의사회. All Rights Reserved
+            </div>
+            <div class="footer_btn" onclick="positionToTop();">^</div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c3089a3225.js" crossorigin="anonymous"></script>
+<script src="js/script2.js"></script>
+
+</html>

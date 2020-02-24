@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+#pre {
+    width: 100%;
+    background-color: #fff;
+}
+
+.section_pre_title {
+    width: 100%;
+    height: 55px;
+    background-color: #cce2ff;
+}
+
+.section_pre_title_area {
+    width: 1024px;
+    height: 55px;
+    margin: 0 auto;
+    padding-left: 13px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -1.44px;
+    line-height: 55px;
+    text-align: left;
+    color: #2b2b2b;
+}
+
+.notice_area {
+    margin: 0 auto;
+    width: 1024px;
+    height: 879px;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    height: 81px;
+}
+
+.search_category {
+    position: absolute;
+    top: 36px;
+    left: 665px;
+    width: 99px;
+    height: 33px;
+    border: solid 1px #c1c1c1;
+    background-color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: -0.96px;
+    text-align: left;
+    color: #2b2b2b;
+    padding-left: 8px;
+}
+
+.search_text {
+    position: absolute;
+    top: 36px;
+    left: 775px;
+    width: 193px !important;
+    height: 33px;
+    border: solid 1px #c1c1c1 !important;
+    background-color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: -0.96px;
+    text-align: left;
+    color: #2b2b2b;
+    padding: 5px !important;
+    padding-left: 11px !important;
+}
+
+.search_text::placeholder {
+    color: #2b2b2b;
+}
+
+.search_btn {
+    position: absolute;
+    top: 42.4px;
+    left: 981.9px;
+    width: 20.6px;
+    height: 20.6px;
+    cursor: pointer;
+}
+
+.search_btn i {
+    font-size: 20px;
+}
+
+.board_area {
+    width: 993px;
+    margin: 0 auto;
+}
+
+.board_tab_bar {
+    width: 100%;
+    height: 59px;
+    border-top: solid 2px #707070;
+    background-color: #f4f4f4;
+}
+
+.board_tab_bar>div {
+    float: left;
+}
+
+.board_tab_num {
+    margin-top: 19px;
+    width: 98px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: center;
+    color: #2b2b2b;
+}
+
+.board_tab_title {
+    margin-top: 19px;
+    width: 725px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: center;
+    color: #2b2b2b;
+}
+
+.board_tab_date {
+    margin-top: 19px;
+    width: 84.9px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: center;
+    color: #2b2b2b;
+}
+
+.board_item {
+    width: 100%;
+    height: 59px;
+    border-bottom: solid 2px #707070;
+    cursor: pointer;
+}
+
+.board_item>div {
+    float: left;
+}
+
+.board_item_num {
+    margin-top: 19px;
+    font-family: 'Noto Sans', sans-serif;
+    width: 98px;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    padding-left: 38px;
+    color: #2b2b2b;
+}
+
+.board_item_title {
+    margin-top: 19px;
+    width: 725px;
+    height: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: left;
+    color: #2b2b2b;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.board_item_date {
+    margin-top: 19px;
+    width: 84.9px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: center;
+    color: #2b2b2b;
+}
+
+.pagination {
+    margin-top: -29px;
+    margin-left: 900px;
+}
+
+.pagination>* {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: left;
+    color: #2b2b2b;
+    cursor: pointer;
+}
+
+.pagination .on {
+    font-weight: bold;
+}
+
+.insert_board_btn {
+    margin-top: 17px;
+    margin-left: 16px;
+    width: 123px;
+    height: 51px;
+    border-radius: 26px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #c1c1c1;
+    background-color: #fdfdfd;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 51px;
+    letter-spacing: -1.12px;
+    text-align: center;
+    color: #464646;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .section_pre_title_area {
+        width: 100%;
+    }
+    .notice_area {
+        width: 100%;
+    }
+    .search_category {
+        top: 31px;
+        left: 11px;
+    }
+    .search_text {
+        top: 31px;
+        left: 123px;
+    }
+    .search_btn {
+        top: 37.4px;
+        left: 329.9px;
+    }
+    .board_area {
+        width: 348px;
+    }
+    .board_tab_num {
+        width: 55px;
+    }
+    .board_tab_title {
+        width: 183px;
+        height: 20px;
+    }
+    .board_tab_date {
+        width: 55px;
+    }
+    .board_item_num {
+        width: 55px;
+        padding-left: 0;
+        text-align: center;
+        font-size: 12px;
+    }
+    .board_item_title {
+        width: 183px;
+        padding-left: 0;
+        text-align: center;
+        font-size: 12px;
+    }
+    .board_item_date {
+        width: 55px;
+        padding-left: 0;
+        text-align: center;
+        font-size: 12px;
+    }
+    .pagination {
+        margin-left: 254px;
+    }
+}

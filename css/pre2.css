@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#pre {
+    width: 100%;
+    min-height: 704px;
+    background-color: #fff;
+}
+
+.section_pre_title {
+    width: 100%;
+    height: 55px;
+    background-color: #cce2ff;
+}
+
+.section_pre_title_area {
+    width: 1024px;
+    height: 55px;
+    margin: 0 auto;
+    padding-left: 13px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -1.44px;
+    line-height: 55px;
+    text-align: left;
+    color: #2b2b2b;
+}
+
+.pre_item_area {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 8px 4px 122px 4px;
+    overflow: auto;
+}
+
+.pre_item {
+    position: relative;
+    width: 488px;
+    height: 153px;
+    margin: 8px 10px;
+    float: left;
+    border: solid 1px #bfbfbf;
+    background-color: #fcfafa;
+}
+
+.pre_item>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pre_item>a:hover {
+    text-decoration: none;
+}
+
+.pre_item_term {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: -0.96px;
+    text-align: left;
+    color: #1967d1;
+}
+
+.pre_item_title {
+    position: absolute;
+    top: 30px;
+    left: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: left;
+    color: #2b2b2b;
+}
+
+.pre_item_tel {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: -1.12px;
+    text-align: left;
+    color: #2b2b2b;
+}
+
+@media (max-width: 800px) {
+    #pre {
+        min-height: 572px;
+    }
+    .section_pre_title_area {
+        width: 100%;
+    }
+    .pre_item_area {
+        width: 100%;
+        padding: 6px 0 0 0
+    }
+    .pre_item {
+        width: 356px;
+        margin: 6px auto;
+        float: none;
+    }
+}

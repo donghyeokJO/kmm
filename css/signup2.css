@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px !important;
+}
+
+#login {
+    position: relative;
+    margin: 0 auto;
+    width: 1024px;
+    height: 1800px;
+}
+
+.login_left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+    padding-top: 75px;
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.login_bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 1700px;
+    background-color: #ddd;
+}
+
+.login_right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.big_logo>p {
+    position: absolute;
+    top: 270px;
+    width: 100%;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: center;
+    color: #051f3e;
+}
+
+.big_logo>span {
+    position: absolute;
+    top: 322px;
+    width: 100%;
+    opacity: 0.6;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 24.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: normal;
+    text-align: center;
+    color: #12193b;
+}
+
+#signup_form_01 {
+    width: 375px;
+}
+
+.button {
+    width: 337px;
+    height: 44px !important;
+}
+
+input[type=file] {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.3px #2b2b2b;
+    width: 100%;
+    padding: 19px 16px;
+    border-radius: 0;
+    display: block !important;
+}
+
+.color_red {
+    opacity: 0.8;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ff1a1a;
+}
+
+.color_green {
+    opacity: 0.8;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #009900;
+}
+
+.id_check {
+    position: absolute;
+    top: 9px;
+    right: 22px;
+    width: 88px;
+    height: 32px;
+    border-radius: 25px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.3px #2b2b2b;
+    background-color: #464646;
+    opacity: 1;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 32px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.input_file {
+    position: absolute;
+    top: 9px;
+    right: 22px;
+    width: 88px !important;
+    height: 32px;
+    border-radius: 25px !important;
+    padding: 0 !important;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+
+    .login_bar,
+    .login_right {
+        display: none;
+    }
+
+    #login {
+        width: 100%;
+    }
+
+    .login_left {
+        width: 100%;
+    }
+
+    #signup_form_01 {
+        width: 90%;
+    }
+
+    .button {
+        width: 90%;
+    }
+}
